@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Result</title>
+     <link rel="stylesheet" href="sty.css">
+</head>
+<body>
+    <nav>
+        <div class="data">
+            <h1>HAYATHUL HUDA HS MADRASA</h1>  
+            <h3>BEDIRA Reg:4804</h3> 
+            <h4>Under SKIMVB</h4>
+        </div>
+    </nav>
+
+    <h2 id="congratsText" class="congrats">🎉 Congratulations! 🎉</h2>
+
+    <div class="container">
+        <h2 id="resultTitle">Exam Results</h2>
+        <img id="resultImage" src="" alt="Result Image" style="max-width: 100%; height: auto; display: none;">
+        <p id="resultDisplay"></p>
+        <button onclick="goHome()" style="margin-top: 20px; padding: 10px 20px; font-size: 16px; cursor: pointer;">Check Another Result</button>
+
+    </div>
+
+    <script>
+        window.onload = function() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var classValue = urlParams.get("class");
+            var resultImage = document.getElementById("resultImage");
+            var resultDisplay = document.getElementById("resultDisplay");
+
+            // Mapping class values to result images
+            var imageMap = {
+                "1": "public/cl-1.jpg",
+                "2": "public/cl-2.jpg",
+                "3": "public/cl-3.jpg",
+                "4": "public/class4.png",
+                "5": "public/cl-5.jpg",
+                "6": "public/cl-6.jpg",
+                "7": "public/cl-7.jpg",
+                "8": "public/cl-8.jpg",
+                "9": "public/cl-9.jpg",
+                "10": "public/cl-10.jpg",
+                "11": "public/cl-11.jpg",
+                "12": "public/cl-12.jpg",
+
+            };
+
+            if (imageMap[classValue]) {
+                resultImage.src = imageMap[classValue];
+                resultImage.style.display = "block";
+                resultDisplay.innerText = "Exam results for Class " + classValue;
+            } else {
+                resultDisplay.innerText = "No results available.";
+            }
+        };
+        function goHome() {
+            window.location.href = "index.html";
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Annual Exam Results</title>
+    <link rel="stylesheet" href="index.css">
+
+  </head>
+  <body>
+    <nav>
+      <div class="data">
+        <h1>HAYATHUL HUDA HS MADRASA</h1>
+        <h3>BEDIRA Reg:4804</h3>
+        <h4>Under SKIMVB</h4>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h2>Annual Exam Result March 2025</h2>
+
+      <label for="classSelect">Classes:</label>
+      <select id="classSelect">
+        <option value="1">Class 1</option>
+        <option value="2">Class 2</option>
+        <option value="3">Class 3</option>
+        <option value="4">Class 4</option>
+        <option value="5">Class 5</option>
+        <option value="6">Class 6</option>
+        <option value="7">Class 7</option>
+        <option value="8">Class 8</option>
+        <option value="9">Class 9</option>
+        <option value="10">Class 10</option>
+        <option value="11">Class +1</option>
+        <option value="12">Class +2</option>
+      </select>
+
+      <button onclick="redirectToResult()">Submit</button>
+    </div>
+
+    <script>
+      function redirectToResult() {
+        var classValue = document.getElementById("classSelect").value;
+        window.location.href = "result.html?class=" + classValue;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,143 @@
+/* General Styling */
+body {
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(135deg, #17e566, hwb(348 88% 10%), #7e76b3);
+
+    color: rgb(11, 10, 10);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Navbar */
+nav {
+    background: rgba(56, 219, 94, 0.2);
+    padding: 15px 0;
+    text-align: center;
+}
+
+.data h1, .data h3, .data h4 {
+    margin: 5px 0;
+}
+
+/* Container */
+.container {
+    margin-top: 50px;
+    padding: 20px;
+    background: rgba(65, 185, 18, 0.742);
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    animation: slideIn 1.5s ease-out;
+}
+
+/* Image Styling */
+.result-img {
+    max-width: 100%;
+    height: auto;
+    display: none;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Button */
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background: #ff1e56;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background: #0eb58e;
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/* Animated Congratulations Text */
+.congrats {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: #a5101f;
+    text-shadow: 0 0 10px #fff, 0 0 20px #ffdd57, 0 0 30px #ff7800;
+    animation: glow 2s infinite alternate ease-in-out, bounce 1.5s infinite;
+    margin-top: 30px;
+}
+
+/* Glowing Effect */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #ffdd57, 0 0 30px #ff7800;
+    }
+    100% {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ffea00, 0 0 40px #ff9800;
+    }
+}
+
+/* Bouncing Effect */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Styling for Result Button */
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background: #ff1e56;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background: #ff3f5e;
+    transform: scale(1.1);
+}
