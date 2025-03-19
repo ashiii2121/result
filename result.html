@@ -15,15 +15,20 @@
         </div>
     </nav>
 
-    <h2 id="congratsText" class="congrats">🎉 Congratulations! 🎉</h2>
 
     <div class="container">
         <h2 id="resultTitle">Exam Results</h2>
         <img id="resultImage" src="" alt="Result Image" style="max-width: 100%; height: auto; display: none;">
         <p id="resultDisplay"></p>
+        <h2 id="congratsText" class="congrats">🎉 Congratulations! 🎉</h2>
+
         <button onclick="goHome()" style="margin-top: 20px; padding: 10px 20px; font-size: 16px; cursor: pointer;">Check Another Result</button>
 
     </div>
+
+
+
+
 
     <script>
         window.onload = function() {
@@ -37,7 +42,7 @@
                 "1": "public/cl-1.jpg",
                 "2": "public/cl-2.jpg",
                 "3": "public/cl-3.jpg",
-                "4": "public/class4.png",
+                "4": "public/cl-4.jpg",
                 "5": "public/cl-5.jpg",
                 "6": "public/cl-6.jpg",
                 "7": "public/cl-7.jpg",
@@ -52,7 +57,7 @@
             if (imageMap[classValue]) {
                 resultImage.src = imageMap[classValue];
                 resultImage.style.display = "block";
-                resultDisplay.innerText = "Exam results for Class " + classValue;
+                // resultDisplay.innerText = "Exam results for Class " + classValue;
             } else {
                 resultDisplay.innerText = "No results available.";
             }
